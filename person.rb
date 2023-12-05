@@ -21,3 +21,5 @@ def initialize(id, name: "Unknown", age: 0, parent_permission: true)
 
   def of_age?
     @age >= 18
+
+  end
