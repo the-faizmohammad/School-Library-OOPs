@@ -33,4 +33,16 @@ class App
     puts "Rentals found with ID: #{id}"
     record.map { |rental| puts "Date: #{rental.date} - Book \"#{rental.book.title}\" by #{rental.book.author}" }
   end
+def create_person
+    print 'Do you want to create a student (1) or a Teacher (2)? [Input the number]: '
+    person = gets.chomp.to_i
+    if person == 1
+      create_student
+    elsif person == 2
+      create_teacher
+    else
+      puts "#{person} is an nvalid option! "
+    end
+  end
+
 end
