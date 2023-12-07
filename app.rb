@@ -44,5 +44,26 @@ def create_person
       puts "#{person} is an nvalid option! "
     end
   end
+def create_student
+    print 'Age: '
+    age = gets.chomp.to_i
 
+    print 'Name: '
+    name = gets.chomp.to_s
+
+    print 'Has parent permission? [Y/N]: '
+    parent_permission = gets.chomp.to_s
+
+    if parent_permission =~ /^[Yy]/
+      student = Student.new('Unknown', age, name, parent_permission: true)
+    elsif parent_permission =~ /^[Nn]/
+      student = Student.new('Unknown', age, name, parent_permission: false)
+    else
+      puts 'Ivalid Value!!'
+      return
+    end
+
+    @people.push(student)
+    puts 'Person Created Successfully'
+  end
 end
