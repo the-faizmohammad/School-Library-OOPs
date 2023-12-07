@@ -92,4 +92,25 @@ def create_book
     @books.push(book)
     puts 'Book created successfully'
   end
+
+  def list_books_with_index
+    @books.each_with_index do |book, i|
+      puts "#{i}) Title: \"#{book.title}\", Author: #{book.author}"
+    end
+  end
+
+  def list_people_with_index
+    @people.each_with_index do |person, i|
+      puts "#{i}) [#{person.class.name}] Name: \"#{person.name}\", ID: #{person.id}, Age: #{person.age}"
+    end
+  end
+
+  def create_rental
+    puts 'Select Book from the following list by number'
+    list_books_with_index
+    book_id = gets.chomp.to_i
+    unless (0..@books.length).include?(book_id)
+      puts "Can't add rental record! Book #{book_id} doesn't exist"
+      return
+    end
 end
