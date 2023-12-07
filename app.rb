@@ -33,7 +33,8 @@ class App
     puts "Rentals found with ID: #{id}"
     record.map { |rental| puts "Date: #{rental.date} - Book \"#{rental.book.title}\" by #{rental.book.author}" }
   end
-def create_person
+
+  def create_person
     print 'Do you want to create a student (1) or a Teacher (2)? [Input the number]: '
     person = gets.chomp.to_i
     if person == 1
@@ -44,7 +45,8 @@ def create_person
       puts "#{person} is an nvalid option! "
     end
   end
-def create_student
+
+  def create_student
     print 'Age: '
     age = gets.chomp.to_i
 
@@ -66,6 +68,7 @@ def create_student
     @people.push(student)
     puts 'Person Created Successfully'
   end
+
   def create_teacher
     print 'Age: '
     age = gets.chomp.to_i
@@ -81,7 +84,7 @@ def create_student
     puts 'Person Created Successfully'
   end
 
-def create_book
+  def create_book
     print 'Title: '
     title = gets.chomp.to_s
 
@@ -113,4 +116,23 @@ def create_book
       puts "Can't add rental record! Book #{book_id} doesn't exist"
       return
     end
+
+    book = @books[book_id]
+    puts "\nSelect a person from the following list by number"
+    list_people_with_index
+    person_index = gets.chomp.to_i
+    unless (0..@people.length).include?(person_index)
+      puts "Can't add a record! Person doesn't exist"
+      return
+    end
+    person = @people[person_index]
+    print 'Date: '
+    date = gets.chomp.to_s
+    @rentals.push(Rental.new(date, book, person))
+    puts 'Rental Created successfully'
+  end
+
+  def run
+    prompt
+  end
 end
