@@ -66,4 +66,18 @@ def create_student
     @people.push(student)
     puts 'Person Created Successfully'
   end
+  def create_teacher
+    print 'Age: '
+    age = gets.chomp.to_i
+
+    print 'Name: '
+    name = gets.chomp.to_s
+
+    print 'Specialization: '
+    specialization = gets.chomp.to_s
+
+    teacher = Teacher.new(specialization, age, name)
+    @people.push(teacher)
+    puts 'Person Created Successfully'
+  end
 end
