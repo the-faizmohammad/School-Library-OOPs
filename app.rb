@@ -80,4 +80,16 @@ def create_student
     @people.push(teacher)
     puts 'Person Created Successfully'
   end
+
+def create_book
+    print 'Title: '
+    title = gets.chomp.to_s
+
+    print 'Author: '
+    author = gets.chomp.to_s
+
+    book = Book.new(title, author)
+    @books.push(book)
+    puts 'Book created successfully'
+  end
 end
