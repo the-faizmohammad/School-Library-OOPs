@@ -20,3 +20,4 @@ class Student < Person
     '¯(ツ)/¯'
   end
 end
+l
