@@ -20,7 +20,7 @@ class LibraryApp
     puts 'Welcome to Indian School Library App!'
   end
 
-  def get_user_option
+  def user_option
     print 'Enter your choice: '
     gets.chomp.to_i
   end
@@ -42,7 +42,7 @@ class LibraryApp
     welcome_message
     loop do
       display_options
-      option = get_user_option
+      option = user_option
       break if option == 7
 
       process_option(option)
