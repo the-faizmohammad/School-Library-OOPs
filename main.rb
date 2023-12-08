@@ -1,53 +1,49 @@
 require './app'
 
-class LibraryApp
-  def initialize
-    @app = App.new
-  end
+def all_options
+  puts "\nPlease choose an option by enterin a number:\n
+1 - List all Books\n
+2 - List all People\n
+3 - Create a Person\n
+4 - Create a Book\n
+5 - Create a Rental\n
+6 - List all rentals for a given person id\n
+7 - Exit"
+end
 
-  def display_options
-    puts "\nPlease choose an option by entering a number:\n
-    1 - List all Books
-    2 - List all People
-    3 - Create a Person
-    4 - Create a Book
-    5 - Create a Rental
-    6 - List all rentals for a given person id
-    7 - Exit"
-  end
+def prompt
+  puts 'Welcome to School Library App!'
+  loop do
+    all_options
+    option = gets.chomp.to_i
+    break if option == 7
 
-  def welcome_message
-    puts 'Welcome to Indian School Library App!'
-  end
-
-  def user_option
-    print 'Enter your choice: '
-    gets.chomp.to_i
-  end
-
-  def process_option(option)
-    case option
-    when 1 then @app.list_books
-    when 2 then @app.list_people
-    when 3 then @app.create_person
-    when 4 then @app.create_book
-    when 5 then @app.create_rental
-    when 6 then @app.list_rentals
-    else
-      puts 'Choose between 1 - 7'
-    end
-  end
-
-  def run
-    welcome_message
-    loop do
-      display_options
-      option = user_option
-      break if option == 7
-
-      process_option(option)
-    end
+    call_option(option)
   end
 end
 
-LibraryApp.new.run
+def call_option(option)
+  case option
+  when 1
+    list_books
+  when 2
+    list_people
+  when 3
+    create_person
+  when 4
+    create_book
+  when 5
+    create_rental
+  when 6
+    list_rentals
+  else
+    puts 'Choose between 1 - 7'
+  end
+end
+
+def main
+  app = App.new
+  app.run
+end
+
+main
