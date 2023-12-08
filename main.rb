@@ -1,4 +1,4 @@
-require './app'
+require_relative 'app'
 
 def all_options
   puts "\nPlease choose an option by enterin a number:\n

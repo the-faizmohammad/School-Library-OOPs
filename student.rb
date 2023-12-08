@@ -1,7 +1,7 @@
-require './person'
-require './classroom'
-require './book'
-require './rental'
+require_relative 'person'
+require_relative 'classroom'
+require_relative 'book'
+require_relative 'rental'
 
 class Student < Person
   attr_reader :classroom
