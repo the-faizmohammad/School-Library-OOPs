@@ -1,6 +1,5 @@
 require './student'
 
-
 RSpec.describe Student do
   let(:classroom) { Classroom.new('Room 101') }
   let(:student) { Student.new(classroom, 18, 'Alice') }
