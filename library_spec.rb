@@ -39,3 +39,29 @@ RSpec.describe Student do
     expect(new_classroom.students).to include(student)
   end
 end
+
+RSpec.describe Teacher do
+  it 'determines if a teacher can use services' do
+    teacher = Teacher.new('Math', 35, 'Mr. Smith')
+    expect(teacher.can_use_services?).to eq(true)
+  end
+end
+
+RSpec.describe Classroom do
+  it 'creates a classroom with a label' do
+    classroom = Classroom.new('Room 101')
+    expect(classroom.label).to eq('Room 101')
+  end
+end
+
+RSpec.describe Rental do
+  it 'creates a rental with a date, book, and person' do
+    book = Book.new('Title', 'Author')
+    person = Person.new(25, 'Jane Doe')
+    rental = Rental.new('2023-01-01', book, person)
+
+    expect(rental.date).to eq('2023-01-01')
+    expect(rental.book).to eq(book)
+    expect(rental.person).to eq(person)
+  end
+end
