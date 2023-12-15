@@ -95,8 +95,8 @@ To run tests after setting up the linters, run the following command:
 
 👤 **Faiz Mohammad**
 
-- GitHub: [@githubhandle](https://github.com/HossainAraf)
-- Twitter: [@gmail](email2faizm@gmail.com)
+- GitHub: [@githubhandle](https://github.com/the-faizmohammad)
+- Twitter: [@twitter](https://twitter.com/FaizMoh58742600)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/faiz-mohammad-967354142/)
 
 👤 **Austin Obimbo**
