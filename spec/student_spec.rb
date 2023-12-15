@@ -3,7 +3,7 @@ require './student'
 
 RSpec.describe Student do
   let(:classroom) { Classroom.new('Room 101') }
-    let(:student) { Student.new(classroom, 18, 'Alice') }
+  let(:student) { Student.new(classroom, 18, 'Alice') }
 
   it 'creates a student with a classroom, age, and name' do
     expect(student.classroom).to eq(classroom)
