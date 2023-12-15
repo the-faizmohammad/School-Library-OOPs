@@ -99,6 +99,12 @@ To run tests after setting up the linters, run the following command:
 - Twitter: [@gmail](email2faizm@gmail.com)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/faiz-mohammad-967354142/)
 
+👤 **Austin Obimbo**
+
+- GitHub: [@githubhandle](https://github.com/Obimbo07)
+- Wellfound: [@Wellfound](https://wellfound.com/u/austin-obimbo)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/austin-obimbo)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
